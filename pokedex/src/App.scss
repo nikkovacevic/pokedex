@@ -1,0 +1,84 @@
+$background: #f0fdff;
+$black: #000000;
+$white: #ffffff;
+$box: #96f1ff;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    text-align: center;
+}
+
+#root {
+    background-color: $background;
+}
+
+.pokeboxwrapper {
+    background-color: $box;
+    height: 35rem;
+    width: 20rem;
+    margin: 2rem;
+    padding: 3rem;
+
+    display: flex;
+    flex: 0 0 24%;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    border-radius: 10%;
+    border: #6db6c2 solid 8px;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($black, 0.6);
+        cursor: pointer;
+    }
+    
+    &:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($black, 0.35);
+      }
+}
+
+
+
+.pokeimg {
+    width: 25rem;
+    height: 25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 20px;
+}
+
+.pokename {
+    color: $black;
+    font-size: 3rem;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 1rem;
+}
+
+
+.pokecards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    min-width: 90vw;
+}
+
