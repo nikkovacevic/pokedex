@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PokemonCard from './PokemonCard';
+import Header from './Header';
 
 const URL = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -18,12 +19,16 @@ export default function VsiPokemoni() {
         }));
     }, []);
 
-    return (     
+    return ( 
+        <>
+            <Header />
+        
             <div className="pokecards"> 
                 {Object.entries(pokemoni)[3] &&
                     Object.entries(pokemoni)[3][1].map((pokemon, index) => {
-                        return <PokemonCard key={index} {...pokemon} id={index+1} />;
+                        return <PokemonCard key={index} {...pokemon} id={index+1} pkmn={pokemon} />;
                 })}
             </div>  
+        </>
     );
 };

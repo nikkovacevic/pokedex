@@ -1,10 +1,14 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 export default function PokemonCard(props) {
 
     console.log(props);
 
     return (
+        <>
+            <Link to={`/pokemon/${props.id}`}> 
         <div className="pokeboxwrapper">
             
             <img 
@@ -14,10 +18,12 @@ export default function PokemonCard(props) {
             /> 
             
             
-            <p className="pokename">
-                {props.name.toUpperCase()}
-            </p>
+             <p className="pokename">
+                 {props.name.toUpperCase()}
+             </p>
                
-        </div>
+             </div>
+            </Link>
+        </>
     )
 }
