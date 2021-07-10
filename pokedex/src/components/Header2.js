@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Search from '../assets/search-solid.svg'
 import X from '../assets/x.svg'
+import Levo from '../assets/arrow-left-solid.svg'
 
 export default function Header() {
 
@@ -12,9 +13,9 @@ export default function Header() {
     }
 
     return (
-        <div className="header">
+        <div className="header2">
             
-                <Link to="/" className={toggle ? "nav toggleoff" : "nav"}>Pokedex</Link>
+                <Link to="/" className={toggle ? "levo toggleoff" : "levo"}><img src={Levo}></img></Link>
             
             <input type="text" className={toggle ? "searchbar toggleon" : "searchbar"} />
             <button className={toggle ? "button toggleon" : "button"}> Find </button>

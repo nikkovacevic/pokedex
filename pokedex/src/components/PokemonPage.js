@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Header from './Header'
+import Header2 from './Header2'
+
+import typeColors from '../assets/pokemonTypes';
 
 export default function PokemonPage() {
 
@@ -51,14 +53,31 @@ export default function PokemonPage() {
 
     return (
         <>
-        <Header />
+        <Header2 />
         <div className="pagecontainer">
 
             <img src={`https://pokeres.bastionbot.org/images/pokemon/${id.id}.png`} alt="slika ne dela"/>
 
             <h1>{name}</h1>
 
-            <h2>Type: {types.map((type)=>{return type.toUpperCase()+" "})}</h2>
+            {/* <h2>Type: {types.map((type)=>{return type.toUpperCase()+" "})}</h2> */}
+
+            <div className="cardtypes">
+
+                {types.map((type, index) => {
+                    return (
+
+                        <div className="cardtype" key={index} style={{ backgroundColor: typeColors[type]}}>
+                            {type}
+                        </div>
+
+                    );
+
+                })}
+
+                
+
+            </div>
 
             <h3>HP: {hp}</h3>
             <h3>Attack: {attack}</h3>

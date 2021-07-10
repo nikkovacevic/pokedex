@@ -4,8 +4,6 @@ import {Link} from 'react-router-dom'
 
 export default function PokemonCard(props) {
 
-    console.log(props);
-
     return (
         <>
             <Link to={`/pokemon/${props.id}`}> 
