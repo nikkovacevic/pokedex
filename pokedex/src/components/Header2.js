@@ -15,7 +15,7 @@ export default function Header() {
     return (
         <div className="header2">
             
-                <Link to="/" className={toggle ? "levo toggleoff" : "levo"}><img src={Levo}></img></Link>
+            <Link to="/" className={toggle ? "levo toggleoff" : "levo"}><img src={Levo} alt="back"></img></Link>
             
             <input type="text" className={toggle ? "searchbar toggleon" : "searchbar"} />
             <button className={toggle ? "button toggleon" : "button"}> Find </button>

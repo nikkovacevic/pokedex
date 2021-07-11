@@ -15,15 +15,11 @@ export default function PokemonPage() {
     const [defense, setDefense] = useState();
     const [speed, setSpeed] = useState();
     
+    useEffect(() => {
 
-    const getPokemon = () => {
+        const getPokemon = () => {
             return fetch(`https://pokeapi.co/api/v2/pokemon/${id.id}`).then((response) => response.json());
         }
-
-
-
-
-    useEffect(() => {
 
         getPokemon().then((data => {
             setName(data.name);
@@ -42,7 +38,10 @@ export default function PokemonPage() {
                     case 'speed':
                         setSpeed(stat['base_stat'])
                         break;
+                    default:
+                        break;
                 }
+                return null;
             });
 
             setTypes(data.types.map(type => type.type.name));
@@ -59,8 +58,6 @@ export default function PokemonPage() {
             <img src={`https://pokeres.bastionbot.org/images/pokemon/${id.id}.png`} alt="slika ne dela"/>
 
             <h1>{name}</h1>
-
-            {/* <h2>Type: {types.map((type)=>{return type.toUpperCase()+" "})}</h2> */}
 
             <div className="cardtypes">
 

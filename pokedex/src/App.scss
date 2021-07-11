@@ -40,9 +40,13 @@ body {
         margin: auto 20px;
     }
 
+    form {
+        display: flex;
+    }
+
     .searchbar {
         display: none;
-        width: 100%;
+        width: 80%;
         margin: 10px 10px;
     }
 
@@ -56,7 +60,7 @@ body {
         font-size: 20px;
         text-transform: uppercase;
         color: $red;
-        margin: auto 10px;
+        margin: auto 0px;
     }
     .x {
         display: none;
