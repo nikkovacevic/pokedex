@@ -9,6 +9,7 @@ export default function PokemonPage() {
     const id = useParams();
 
     const [name, setName] = useState();
+    const [image, setImage] = useState();
     const [types, setTypes] = useState([]);
     const [hp, setHp] = useState();
     const [attack, setAttack] = useState();
@@ -46,6 +47,8 @@ export default function PokemonPage() {
 
             setTypes(data.types.map(type => type.type.name));
 
+            setImage(data.sprites.front_default);
+
         }));
 
     }, []);
@@ -55,7 +58,7 @@ export default function PokemonPage() {
         <Header2 />
         <div className="pagecontainer">
 
-            <img src={`https://pokeres.bastionbot.org/images/pokemon/${id.id}.png`} alt="slika ne dela"/>
+            <img src={image} alt="slika ne dela"/>
 
             <h1>{name}</h1>
 

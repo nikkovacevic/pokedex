@@ -203,8 +203,8 @@ body {
 
 
 .pokeimg {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
 
     display: flex;
     justify-content: center;
@@ -220,6 +220,8 @@ body {
     font-family: 'Kanit', sans-serif;
     font-weight: 500;
     color: $boxfont;
+
+    margin-top: 15px;
 
     display: flex;
     justify-content: center;
@@ -239,7 +241,7 @@ body {
 }
 
 .pagecontainer {
-    width: 100vw;
+    width: 100%;
     height: 100%;
 
     overflow: hidden;

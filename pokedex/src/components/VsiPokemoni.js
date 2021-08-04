@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PokemonCard from './PokemonCard';
 import Header from './Header';
 
-const URL = 'https://pokeapi.co/api/v2/pokemon/?limit=5';
+const URL = 'https://pokeapi.co/api/v2/pokemon/?limit=9';
 
 const getPokemone = () => {
     return fetch(URL).then((response) => response.json());

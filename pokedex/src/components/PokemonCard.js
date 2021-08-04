@@ -7,7 +7,7 @@ export default function PokemonCard(props) {
 
     const [types, setTypes] = useState([]);
 
-    
+    const [image, setImage] = useState();
     
     useEffect(() => {
 
@@ -17,6 +17,9 @@ export default function PokemonCard(props) {
 
         getPokemon().then((data) => {
             setTypes(data.types.map(type => type.type.name));
+
+            setImage(data.sprites.front_default);
+
         });
         
     }, []);
@@ -28,7 +31,7 @@ export default function PokemonCard(props) {
             
             <img 
                 className="pokeimg"
-                src={`https://pokeres.bastionbot.org/images/pokemon/${props.id}.png`}
+                src={image}
                 alt={`${props.name}`}
             /> 
             
